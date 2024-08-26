@@ -1,880 +1,836 @@
 <!DOCTYPE html>
+<html lang="en-us">
 
-
-<html lang="en" data-content_root="../../" data-theme="light">
-
-  <head>
+<head>
+    <meta name="description" content="FURY - Your go-to scientific visualization library." />
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>FURY</title>
 
-    <title>Google Summer of Code Final Work Product &#8212; FURY 0.11.0.dev70+gee3b579e.d20240802 documentation</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
-  </script>
-  
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+    <link rel="icon" href="_static/images/logo.ico" />
+    <link rel="icon" type="image/svg+xml" href="_static/images/logo.svg" />
 
-  
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/pydata-sphinx-theme.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/custom_github.css?v=b0433979" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=522a8817" />
-    <link rel="stylesheet" type="text/css" href="../../_static/vendor/fonts.css?v=51523cda" />
-  
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="../../_static/documentation_options.js?v=9acc508d"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2024/2024-08-21-wachiou-final-report';</script>
+    <link rel="stylesheet" href="_static/css/util.css" />
+    <link rel="stylesheet" href="_static/css/main.css" />
+    <link rel="stylesheet" href="_static/css/sponsors.css" />
+    <link rel="stylesheet" href="_static/css/comp-soft.css" />
+    <link rel="stylesheet" href="_static/css/navbar.css" />
+
+    <link rel="stylesheet" href="_static/vendor/vars.css" />
+    <link rel="stylesheet" href="_static/vendor/styles.css" />
+    <link rel="stylesheet" href="_static/vendor/content.css" />
+    <link rel="stylesheet" href="_static/vendor/news.css" />
+    <link rel="stylesheet" href="_static/vendor/keyfeatures.css" />
+    <link rel="stylesheet" href="_static/vendor/tables.css" />
+    <link rel="stylesheet" href="_static/vendor/videos.css" />
+    <link rel="stylesheet" href="_static/vendor/posts.css" />
+    <link rel="stylesheet" href="_static/vendor/teams.css" />
+    <link rel="stylesheet" href="_static/vendor/code-highlight.css" />
+    <link rel="stylesheet" href="_static/vendor/installtext.css" />
+    <link rel="stylesheet" href="_static/vendor/gallery.css" />
+    <link rel="stylesheet" href="_static/vendor/features.css" />
+    <link rel="stylesheet" href="_static/vendor/fa.css" />
+    <link rel="stylesheet" href="_static/vendor/tabs.css" />
+    <link rel="stylesheet" href="_static/vendor/display-card.css" />
+    <link rel="stylesheet" href="_static/vendor/new-promotions.css" />
+    <link rel="stylesheet" href="_static/vendor/fonts.css" />
+    <link rel="stylesheet" href="_static/vendor/style.css" />
+    <link rel="stylesheet" href="_static/vendor/icons.css" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="_static/images/logo.svg" />
+
+    <meta name="twitter:title" content="FURY" />
+    <meta name="twitter:description" content="FURY - Your go-to scientific visualization library." />
+
+</head>
+
+<body>
+
+    <nav id="nav" class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbar-menu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbar-menu" class="navbar-menu is-static">
+
+                <div class="navbar-end">
+                    <a href="installation.html" class="navbar-item is-secondary">
+                        Installation
+                    </a>
+                    <a href="auto_examples/index.html" class="navbar-item is-secondary">
+                        Tutorials
+                    </a>
+                    <a href="blog.html" class="navbar-item is-secondary">
+                        Blog
+                    </a>
+                    <a href="reference/index.html" class="navbar-item is-secondary">
+                        API
+                    </a>
+                    <a href="community.html" class="navbar-item is-secondary">
+                        Community
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <nav id="navbar-clone" class="navbar is-fresh is-transparent" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <img id="navbar-logo" src="_static/images/logo.svg" alt="%!s(&lt;nil&gt;) logo">
+                    <div id="navbar-logo-text">FURY</div>
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="cloned-navbar-menu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="cloned-navbar-menu" class="navbar-menu is-fixed">
+
+                <div class="navbar-end">
+                    <a href="installation.html" class="navbar-item is-secondary">
+                        Installation
+                    </a>
+                    <a href="auto_examples/index.html" class="navbar-item is-secondary">
+                        Demos
+                    </a>
+                    <a href="reference/index.html" class="navbar-item is-secondary">
+                        API
+                    </a>
+                    <a href="community.html" class="navbar-item is-secondary">
+                        Community
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-title-content">
+                    <div class="hero-title">
+                        <img class="hero-logo" src="_static/images/logo.svg" alt="FURY logo. ">
+                        <p class="logo-text"> fury </p>
+                    </div>
+                    <div class="flex-column">
+
+                        <div class="hero-subtitle">
+                            A free and open-source software library for Scientific Visualization and 3D animations. Learn how to use the rendering equation
+                            \begin{equation}
+                            L_o\left( x, \omega_o\right) = L_e\left( x, \omega_o\right) + \int_{\Omega} L_i\left( x, \omega_i\right)  f_r\left(\omega_i, x,  \omega_o\right) \left(\omega_i\cdot n\right) d\omega_i
+                            \end{equation}
+                            and other powerful techniques to create the most advanced effects and give new life to your data.
+                        </div>
+
+
+                        <div class="hero-cta">
+                            <a href="getting_started.html"><button class="cta-button">Get started</button></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="gallery">
+        <div class="container">
+            <h1 class="gallery-title">FURY in action</h1>
+            <div class="gallery-box-container">
+                <div class="gallery-box-content gallery-underline">
+                    <div class="gallery-box-title">Shaders</div>
+                    <img src="_static/images/horse.gif" alt="">
+                    <div class="gallery-box-text">Shaders are simple programs that describe the traits of either a
+                        vertex or a pixel. Vertex shaders describe the attributes (position, texture coordinates,
+                        colors, etc.) of a vertex, while pixel shaders describe the traits (color, z-depth and alpha
+                        value) of a pixel.</div>
+                    </div>
+                <div class="gallery-box-content gallery-underline">
+                    <div class="gallery-box-title">Physically based rendering</div>
+                    <img src="_static/images/physical.gif" alt="">
+                    <div class="gallery-box-text">Physically based rendering (PBR) is a computer graphics approach that seeks to render images in a way that models the flow of light in the real world. Many PBR pipelines aim to achieve photorealism. This video demonstrates Anisotropic specular reflection in FURY.</div>
+                </div>
+                <div class="gallery-box-content gallery-underline">
+                    <div class="gallery-box-title">large networks</div>
+                    <img src="_static/images/4.gif" alt="">
+                    <div class="gallery-box-text">A large network can be visualized by presenting its interesting parts
+                        preferably combined with one or several 'maps' in a multiview display. The main view displays a
+                        selected part in details, while the 'maps' provide the user with information about the position
+                        of the part inside the network.</div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <div id="container">
+        <header id="banner" class="wrapper">
+            <div class="inner">
+                <h1 id="banner-title">Install FURY And Start Using It!</h1>
+                    <div id="banner-start">
+                        <span id="banner-start-command" class="txt-rotate" data-period="2000"
+                            data-rotate='["pip install fury", "conda install -c conda-forge fury"]'></span>
+                    </div>
+            </div>
+        </header>
+    </div>
+    <section class="p-t-20 tabs-section">
+        <div class="container">
+            <div class="uikit-tab-wrapper">
+                <ul class="uk-flex-center uk-nav" uk-tab>
+                    <li class="uk-active"><a href="#">Scientific Domains</a></li>
+                    <li><a href="#">Physics Simulation</a></li>
+                    <li><a href="#">Molecular Dynamics</a></li>
+                    <li><a href="#">Neuroscience</a></li>
+                    <li><a href="#">Additional Features</a></li>
+                </ul>
+                <ul id="tabs-content" class="uk-switcher uk-margin">
+                    <li class="scientific-domains">
+                        <div class="mobile-view">
+                            <div class="image-grid grid g-gap-2 g-m-col-2">
+                                <div>
+                                    <div class="h-card__header">
+                                        <img class="h-card__title-icon engineering" src="_static/images/sc-dom/engineering.svg" alt="">
+                                        <h3 class="h-card__title">Engineering</h3>
+                                    </div>
+                                    <a href="auto_examples/10_animation/viz_robot_arm_animation.html">
+                                        <img src="_static/images/sc-dom/popup/engineering.gif" alt="Engineering" align="middle"></a>
+
+                                </div>
+                                <div>
+                                    <div class="h-card__header">
+                                        <img class="h-card__title-icon" src="_static/images/sc-dom/physics.svg" alt="">
+                                        <h3 class="h-card__title">Physics</h3>
+                                    </div>
+                                    <a href="auto_examples/04_demos/viz_brownian_motion.html">
+                                        <img src="_static/images/sc-dom/popup/physics.gif" alt="Physics" align="middle"></a>
+
+                                </div>
+                                <div>
+                                    <div class="h-card__header">
+                                        <img class="h-card__title-icon" src="_static/images/sc-dom/chemistry.svg" alt="">
+                                        <h3 class="h-card__title">Chemistry</h3>
+                                    </div>
+                                    <a href="auto_examples/04_demos/collision-particles.html">
+                                        <img src="_static/images/sc-dom/popup/chemistry.gif" alt="Chemistry" align="middle"></a>
+
+                                </div>
+                                <div>
+                                    <div class="h-card__header">
+                                        <img class="h-card__title-icon" src="_static/images/sc-dom/astronomy.svg" alt="">
+                                        <h3 class="h-card__title">Astronomy</h3>
+                                    </div>
+                                    <a href="auto_examples/04_demos/viz_tesseract.html">
+                                        <img src="_static/images/sc-dom/popup/astronomy.gif" alt="Chemistry" align="middle"></a>
+
+                                </div>
+                                <div>
+                                    <div class="h-card__header">
+                                        <img class="h-card__title-icon" src="_static/images/sc-dom/aerospace.svg" alt="">
+                                        <h3 class="h-card__title">Aerospace</h3>
+                                    </div>
+                                    <a href="auto_examples/01_introductory/viz_texture.html">
+                                        <img src="_static/images/sc-dom/popup/aerospace.gif" alt="Aerospace" align="middle"></a>
+
+                                </div>
+                                <div>
+                                    <div class="h-card__header">
+                                        <img class="h-card__title-icon" src="_static/images/sc-dom/biology.svg" alt="">
+                                        <h3 class="h-card__title">Biology</h3>
+                                    </div>
+                                    <a href="auto_examples/04_demos/viz_bundles.html">
+                                        <img src="_static/images/sc-dom/popup/biology.gif" alt="Biology" align="middle"></a>
+
+                                </div>
+                                <div>
+                                    <div class="h-card__header">
+                                        <img class="h-card__title-icon" src="_static/images/sc-dom/data-science.svg" alt="">
+                                        <h3 class="h-card__title">Data Science</h3>
+                                    </div>
+                                    <a href="auto_examples/01_introductory/viz_morphing.html">
+                                        <img src="_static/images/sc-dom/popup/data-science.gif" alt="Data Science" align="middle"></a>
+
+                                </div>
+                                <div>
+                                    <div class="h-card__header">
+                                        <img class="h-card__title-icon" src="_static/images/sc-dom/network.svg" alt="">
+                                        <h3 class="h-card__title">Network Science</h3>
+                                    </div>
+                                    <a href="auto_examples/04_demos/viz_network_animated.html">
+                                        <img src="_static/images/sc-dom/popup/network-science.gif" alt="Network Science" align="middle"></a>
+
+                                </div>
+                                <div>
+                                    <div class="h-card__header">
+                                        <img class="h-card__title-icon" src="_static/images/sc-dom/maths.svg" alt="">
+                                        <h3 class="h-card__title">Mathematics</h3>
+                                    </div>
+                                    <a href="auto_examples/04_demos/viz_animated_surfaces.html">
+                                        <img src="_static/images/sc-dom/popup/mathematics.gif" alt="Mathematics"
+                                         align="middle"></a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h-card non-mobile-view">
+                            <div class="h-card__holder">
+                                <div class="h-card__display-wrapper">
+                                    <img class="h-card__display" src="_static/images/sc-dom/popup/engineering.gif" alt="">
+                                </div>
+                                <div class="h-card__data">
+                                    <div class="h-card__header">
+                                        <img class="h-card__title-icon engineering" src="_static/images/sc-dom/engineering.svg" alt="">
+                                        <h3 class="h-card__title">Engineering</h3>
+                                    </div>
+                                    <p class="h-card__content">FURY is a powerful tool for engineers and visualisation experts. It allows them to create high-quality visualisations quickly and easily, without the need for extensive programming knowledge. Its functional programming paradigm and support for large data sets make it an ideal tool for visualising complex systems and data, such as those used in engineering and scientific research.
+                                    </p>
+
+                                    <a class="h-card__button" href="auto_examples/10_animation/viz_robot_arm_animation.html">
+                                        View More
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <img id="engineering" class="h-card__data-background engineering" src="_static/images/sc-dom/engineering.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="h-card__holder">
+                                <div class="h-card__display-wrapper">
+                                    <img class="h-card__display" src="_static/images/sc-dom/popup/physics.gif" alt="">
+                                </div>
+                                <div class="h-card__data">
+                                    <div class="h-card__header">
+                                        <img id="physics" class="h-card__title-icon" src="_static/images/sc-dom/physics.svg" alt="">
+                                        <h3 class="h-card__title">Physics</h3>
+                                    </div>
+
+                                    <p class="h-card__content">FURY's ability to create stunning visualisations of complex physical phenomena. For example, FURY can be used to create detailed visualisations of fluid dynamics, such as the flow of water or gas. It can also be used to visualise the motion of particles in a simulation.
+                                    </p>
+
+                                    <a class="h-card__button" href="auto_examples/04_demos/viz_brownian_motion.html">
+                                        View More
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <img id="physics" class="h-card__data-background" src="_static/images/sc-dom/physics.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="h-card__holder">
+                                <div class="h-card__display-wrapper">
+                                    <img class="h-card__display" src="_static/images/sc-dom/popup/chemistry.gif" alt="">
+                                </div>
+
+                                <div class="h-card__data">
+                                    <div class="h-card__header">
+                                        <img class="h-card__title-icon" src="_static/images/sc-dom/chemistry.svg" alt="">
+                                        <h3 class="h-card__title">Chemistry</h3>
+                                    </div>
+                                    <p class="h-card__content">FURY can be used to create detailed visualisations of the structure of molecules, including their bonding and interactions. It can also be used to visualise the motion of atoms and molecules in a simulation, such as the motion of atoms and molecules in a material.
+                                    </p>
+
+                                    <a class="h-card__button" href="auto_examples/04_demos/collision-particles.html">
+                                        View More
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <img id="chemistry" class="h-card__data-background" src="_static/images/sc-dom/chemistry.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="h-card__holder">
+                                <div class="h-card__display-wrapper">
+                                    <img class="h-card__display" src="_static/images/sc-dom/popup/astronomy.gif" alt="">
+                                </div>
+
+                                <div class="h-card__data">
+                                    <div class="h-card__header">
+                                        <img class="h-card__title-icon" src="_static/images/sc-dom/astronomy.svg" alt="">
+                                        <h3 class="h-card__title">Astronomy</h3>
+                                    </div>
+                                    <p class="h-card__content">FURY can be used to create detailed visualisations of the structure of galaxies, including the distribution of stars, gas, and dust. It can also be used to visualise the motion of celestial bodies in a simulation, such as the motion of stars and planets in a solar system.
+                                    </p>
+
+                                    <a class="h-card__button" href="auto_examples/04_demos/viz_tesseract.html">
+                                        View More
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <img id="astronomy" class="h-card__data-background" src="_static/images/sc-dom/astronomy.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="h-card__holder">
+                                <div class="h-card__display-wrapper">
+                                    <img class="h-card__display" src="_static/images/sc-dom/popup/aerospace.gif" alt="">
+                                </div>
+
+                                <div class="h-card__data">
+                                    <div class="h-card__header">
+                                        <img class="h-card__title-icon" src="_static/images/sc-dom/aerospace.svg" alt="">
+                                        <h3 class="h-card__title">Aerospace</h3>
+                                    </div>
+                                    <p class="h-card__content">FURY can easily create 3D visualizations of aerodynamic simulations, which can help engineers understand the performance of an aircraft in different flight conditions. This can be done by importing the simulation data into FURY and then using the library's built-in functions to create 3D models of the aircraft, along with visualizations of the airflow patterns and other important parameters.
+                                    </p>
+
+                                    <a class="h-card__button" href="auto_examples/01_introductory/viz_texture.html">
+                                        View More
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <img id="aerospace" class="h-card__data-background" src="_static/images/sc-dom/aerospace.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="h-card__holder">
+                                <div class="h-card__display-wrapper">
+                                    <img class="h-card__display" src="_static/images/sc-dom/popup/biology.gif" alt="">
+                                </div>
+
+                                <div class="h-card__data">
+                                    <div class="h-card__header">
+                                        <img class="h-card__title-icon" src="_static/images/sc-dom/biology.svg" alt="">
+                                        <h3 class="h-card__title">Biology</h3>
+                                    </div>
+                                    <p class="h-card__content">With FURY, researchers can create detailed models of cells and organelles, such as the mitochondria, ribosomes, and endoplasmic reticulum. This allows for a more in-depth understanding of the structure and function of these important cellular components.
+                                    </p>
+
+                                    <a class="h-card__button" href="auto_examples/04_demos/viz_bundles.html">
+                                        View More
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <img id="biology" class="h-card__data-background" src="_static/images/sc-dom/biology.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="h-card__holder">
+                                <div class="h-card__display-wrapper">
+                                    <img class="h-card__display" src="_static/images/sc-dom/popup/data-science.gif" alt="">
+                                </div>
+
+                                <div class="h-card__data">
+                                    <div class="h-card__header">
+                                        <img class="h-card__title-icon" src="_static/images/sc-dom/data-science.svg" alt="">
+                                        <h3 class="h-card__title">Data Science</h3>
+                                    </div>
+                                    <p class="h-card__content">One of the key features of FURY is its ability to handle large amounts of data. This makes it perfect for data scientists who need to work with large datasets, as well as for visualizers who need to create interactive and engaging visualizations.
+                                    </p>
+
+                                    <a class="h-card__button" href="auto_examples/01_introductory/viz_morphing.html">
+                                        View More
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <img id="data-science" class="h-card__data-background" src="_static/images/sc-dom/data-science.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="h-card__holder">
+                                <div class="h-card__display-wrapper">
+                                    <img class="h-card__display" src="_static/images/sc-dom/popup/network-science.gif" alt="">
+                                </div>
+
+                                <div class="h-card__data">
+                                    <div class="h-card__header">
+                                        <img class="h-card__title-icon" src="_static/images/sc-dom/network.svg" alt="">
+                                        <h3 class="h-card__title">Network Science</h3>
+                                    </div>
+                                    <p class="h-card__content">One of the key features of FURY is its ability to handle large and complex networks. It can handle millions of nodes and edges, and can display the network in a variety of different ways, including node-link diagrams, matrix plots, and force-directed layouts. This allows users to explore their networks in a variety of different ways, and to find the best way to visualize their data.
+                                    </p>
+
+                                    <a class="h-card__button" href="auto_examples/04_demos/viz_network_animated.html">
+                                        View More
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <img id="network-science" class="h-card__data-background" src="_static/images/sc-dom/network.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="h-card__holder">
+                                <div class="h-card__display-wrapper">
+                                    <img class="h-card__display" src="_static/images/sc-dom/popup/mathematics.gif" alt="">
+                                </div>
+
+                                <div class="h-card__data">
+                                    <div class="h-card__header">
+                                        <img class="h-card__title-icon" src="_static/images/sc-dom/maths.svg" alt="">
+                                        <h3 class="h-card__title">Mathematics</h3>
+                                    </div>
+                                    <p class="h-card__content">FURY allows users to easily visualise complex mathematical data in a way that is easy to understand. For example, a mathematician studying a complex equation could use FURY to create a 3D plot of the equation's solutions, which would make it much easier to understand the behaviour of the equation.
+                                    </p>
+
+                                    <a class="h-card__button" href="auto_examples/04_demos/viz_animated_surfaces.html">
+                                        View More
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <img id="mathematics" class="h-card__data-background" src="_static/images/sc-dom/maths.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="physics-simulation">
+                        <h6 class="tabs-info txt-center">With FURY, it becomes simple to produce multiple physics animations with ease.</h6>
+                        <div class="visualization-images">
+                            <div class="image-grid grid g-gap-2 g-col-3 g-row-2 g-m-col-2 g-m-row-3">
+                                <div>
+                                    <a href="fury-pybullet.html"><img
+                                            src="https://raw.githubusercontent.com/fury-gl/fury-communication-assets/main/physics_domino.gif"
+                                            alt="physics domino" align="middle"></a>
+
+                                </div>
+                                <div>
+                                    <a href="fury-pybullet.html"><img
+                                            src="https://raw.githubusercontent.com/fury-gl/fury-communication-assets/main/physics_bricks_multi_actor.gif"
+                                            alt="physics bricks" align="middle"></a>
+
+                                </div>
+                                <div>
+                                    <a href="fury-pybullet.html"><img
+                                            src="https://raw.githubusercontent.com/fury-gl/fury-communication-assets/main/physics_collision.gif"
+                                            alt="physic collision" align="middle"></a>
+
+                                </div>
+                                <div>
+                                    <a href="auto_examples/index.html#demos"><img
+                                            src="https://raw.githubusercontent.com/fury-gl/fury-communication-assets/main/brownian_motion.gif"
+                                            alt="brownian motion" align="middle"></a>
+
+                                </div>
+                                <div>
+                                    <a href="auto_examples/index.html#demos"><img
+                                            src="https://raw.githubusercontent.com/fury-gl/fury-communication-assets/main/em_wave.gif" alt="Em wave"
+                                            align="middle"></a>
+
+                                </div>
+                                <div>
+                                    <a href="auto_examples/index.html#demos"><img
+                                            src="https://raw.githubusercontent.com/fury-gl/fury-communication-assets/main/helical_path.gif"
+                                            alt="Helical path" align="middle"></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="molecular-dynamics">
+                        <div class="col-sm">
+                            <p class="tabs-info txt-center">Some Molecular Dynamics applications using FURY.</p>
+                        </div>
+                        <div class="grid-container">
+                            <div class="visualization-images">
+                                <div class="image-grid grid g-gap-2 g-col-2">
+                                    <div class="g-span-2 molecular-band">
+                                        <a href="fury-pybullet.html"><img src="https://furiousatoms.com/_static/images/fullerene_1.png" alt="fullrene Modellin" align="middle"></a>
+                                    </div>
+                                    <div>
+                                        <a href="fury-pybullet.html"><img
+                                                src="https://github.com/fury-gl/fury-communication-assets/raw/main/molecular_ribbons.gif"
+                                                alt="Molecular Ribbon" align="middle"></a>
+                                    </div>
+                                    <div>
+                                        <a href="fury-pybullet.html"><img
+                                                src="https://github.com/fury-gl/fury-communication-assets/raw/main/molecular_surface.gif"
+                                                alt="Molecular Surface" align="middle"></a>
+                                    </div>
+                                </div>
+                            </div>
+                    </li>
+                    <li class="neuroscience">
+                        <div class="col-sm">
+                            <p class="tabs-info txt-center">Built with FURY: Neuroscience application examples </p>
+                        </div>
+                        <div class="grid-container">
+                            <div class="visualization-images">
+                                <div class="image-grid grid g-gap-2 g-col-3 g-row-2 g-m-col-2 g-m-row-3">
+                                    <div>
+                                        <a href="fury-pybullet.html"><img src="https://user-images.githubusercontent.com/50577357/155691603-161e0546-f150-4389-badd-72e207a10063.png" alt="Brain bundle " align="middle"></a>
+                                    </div>
+                                    <div>
+                                        <a href="fury-pybullet.html"><img src="https://user-images.githubusercontent.com/9929496/115797697-82d5a100-a3a2-11eb-89b4-d9995930ce47.png" alt="Brain bundle " align="middle"></a>
+                                    </div>
+                                    <div>
+                                        <a href="fury-pybullet.html"><img src="https://github.com/dipy/dipy_data/raw/master/AF_L_highlighted.png" alt="Brain bundle " align="middle"></a>
+                                    </div>
+                                    <div>
+                                        <a href="auto_examples/index.html#demos"><img src="https://github.com/dipy/dipy_data/raw/master/eudx_tracking.png" alt="Brain bundle " align="middle"></a>
+                                    </div>
+                                    <div>
+                                        <a href="auto_examples/index.html#demos"><img src="https://dipy.org/documentation/1.5.0/_images/contour_from_roi_tutorial.png" alt="Brain bundle " align="middle"></a>
+                                    </div>
+                                    <div>
+                                        <a href="auto_examples/index.html#demos"><img src="https://dipy.org/documentation/1.5.0/_images/slices.png" alt="Brain bundle " align="middle"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="other-features">
+                        <div class="keyfeatures-box-container">
+                            <div class="keyfeatures-box-content keyfeatures-underline">
+                                <p>
+                                    <div class="keyfeatures-box-title">Releases</div>
+                                    <div class="keyfeatures-box-text">FURY is a Python library available for scientific
+                                        visualization. The library is available via <a
+                                        href="https://pypi.org/project/fury/">PyPi</a> or Anaconda package system</div>
+                                </p>
+                            </div>
+                            <div class="keyfeatures-box-content keyfeatures-underline">
+                                <p>
+                                    <div class="keyfeatures-box-title">Free</div>
+                                    <div class="keyfeatures-box-text">FURY is totally free and it will be always free</div>
+                                </p>
+                            </div>
+                            <div class="keyfeatures-box-content keyfeatures-underline">
+                                <p>
+                                    <div class="keyfeatures-box-title">Community</div>
+                                    <div class="keyfeatures-box-text">Join FURY family <a
+                                        href="https://fury.gl/latest/community.html">here</a> and share your knowledge</div>
+                                </p>
+                            </div>
+                            <div class="keyfeatures-box-content keyfeatures-underline">
+                                <p>
+                                    <div class="keyfeatures-box-title">Easy to Use</div>
+                                    <div class="keyfeatures-box-text">FURY is designed to be really easy to use</div>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <div id="backtotop"><a href="#" id="backtotop-color"></a></div>
+    <section class="comp-soft-section">
+        <h3 class="comp-soft-title">
+            Compatibility
+        </h3>
+        <div class="comp-soft-wrapper">
+            <div class="comp-soft-container">
+                <div class="comp-soft">
+                    <div class="comp-soft-image-holder">
+                        <img src="_static/images/comp-soft/blender.jpg" alt="">
+                    </div>
+                </div>
+                <div class="comp-soft">
+                    <div class="comp-soft-image-holder">
+                        <img src="_static/images/comp-soft/unity.jpg" alt="">
+                    </div>
+                </div>
+                <div class="comp-soft">
+                    <div class="comp-soft-image-holder">
+                        <img src="_static/images/comp-soft/autodesk.jpg" alt="">
+                    </div>
+                </div>
+                <div class="comp-soft">
+                    <div class="comp-soft-image-holder">
+                        <img src="_static/images/comp-soft/adobedimension.jpg" width="100" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="comp-soft-container">
+                <div class="comp-soft">
+                    <div class="comp-soft-image-holder">
+                        <img src="_static/images/comp-soft/houdini.jpg" alt="">
+                    </div>
+                </div>
+                <div class="comp-soft">
+                    <div class="comp-soft-image-holder">
+                        <img src="_static/images/comp-soft/modo.jpg" alt="">
+                    </div>
+                </div>
+                <div class="comp-soft">
+                    <div class="comp-soft-image-holder">
+                        <img src="_static/images/comp-soft/sketchup.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sponsors-wrapper">
+        <h3 class="sponsors-title">
+            Our Sponsors
+        </h3>
+        <div class="container sponsors">
+            <div class="sponsors-logo">
+                <img src="_static/images/sponsors/luddy.jpg" alt="Luddy">
+            </div>
+            <div class="sponsors-logo">
+                <img src="_static/images/sponsors/gsoc.jpg" alt="GSoC">
+            </div>
+            <div class="sponsors-logo">
+                <img src="_static/images/sponsors/iu.jpg" alt="IU">
+            </div>
+        </div>
+
+        <div class="cite-wrapper">
+            <h3 class="sponsors-title">
+                Cite Us!
+            </h3>
+            <div class="container sponsors">
+                <p>Eleftherios Garyfallidis, Serge Koudoro, Javier Guaje, Marc-Alex Côté, Soham Biswas, David Reagan, Nasim
+                    Anousheh, Filipi Silva, Geoffrey Fox, and FURY Contributors
+                    <a class="cite" href="https://doi.org/10.21105/joss.03384">FURY: advanced scientific visualization</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div id="footer-columns" class="columns">
+                <div class="footer-logo-column">
+                    <img id="footer-logo" src="_static/images/logo.svg" alt=" logo. ">
+                </div>
+                <div class="link-column">
+                    <div class="footer-column">
+                        <div class="footer-header">
+                            <h5>About</h5>
+                        </div>
+                        <ul class="link-list">
+                            <li class="link-list"><a class="footer-link" href="community.html#contributors"><i class="fa fa-angle-double-right"></i>
+                                Developers
+                            </a></li>
+                            <li class="link-list"><a class="footer-link" href="https://discord.gg/6btFPPj"><i class="fa fa-angle-double-right"></i>
+                                Support
+                            </a></li>
+                            <li class="link-list"><a class="footer-link" href="installation.html"><i class="fa fa-angle-double-right"></i>
+                                Download
+                            </a></li>
+                            <li class="link-list"><a class="footer-link" href="auto_examples/index.html"><i class="fa fa-angle-double-right"></i>
+                                Tutorials
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="link-column">
+                    <div class="footer-column">
+                        <div class="footer-header">
+                            <h5>Friends</h5>
+                        </div>
+                        <ul class="link-list">
+                            <li class="link-list"><a class="footer-link" target="_blank" href="https://dipy.org/"><i class="fa fa-angle-double-right"></i>
+                                DIPY
+                            </a></li>
+                            <li class="link-list"><a class="footer-link" target="_blank" href="https://heliosnetwork.io/"><i class="fa fa-angle-double-right"></i>
+                                Helios
+                            </a></li>
+                            <li class="link-list"><a class="footer-link" target="_blank" href="https://furiousatoms.com/"><i class="fa fa-angle-double-right"></i>
+                                Furious Atoms
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="link-column">
+                    <div class="footer-column">
+                        <div class="footer-header">
+                            <h5>Support</h5>
+                        </div>
+                        <ul class="">
+                            <li class="link-list"><a class="footer-link" target="_blank" href="https://engineering.indiana.edu/"><i class="fa fa-angle-double-right"></i>
+                                    The department of Intelligent Systems Engineering of Indiana University
+                            </a></li>
+                            <li class="link-list"><a class="footer-link" target="_blank" href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1720625"><i class="fa fa-angle-double-right"></i>
+                                NSF NCN - Engineered NanoBIO - NSF award #1720625
+                            </a></li>
+                            <li class="link-list"><a class="footer-link" target="_blank" href="https://summerofcode.withgoogle.com/"><i class="fa fa-angle-double-right"></i>
+                                    Google Summer of Code Program
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-actions">
+
+
+                    <nav class="level is-mobile">
+                        <div class="social-media-icons">
+                            <a class="level-item" href="https://github.com/fury-gl/fury"
+                                aria-label="https://github.com/fury-gl/fury">
+                                <span class="icon"><i class="fab fa-github-alt" style="color: white;"></i></span>
+                            </a>
+                            <a class="level-item" href="https://twitter.com/fury_engine"
+                            aria-label="https://twitter.com/fury_engine">
+                            <span class="icon"><i class="fab fa-twitter" style="color: white;"></i></span>
+                        </a>
+                        </div>
+                    </nav>
+                    <div class="copyright">&copy; 2018-2024, FURY. All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="_static/js/fresh.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/js/uikit.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/css/uikit.min.css" />
+    <script src="https://unpkg.com/thebe@0.8.2/lib/index.js"></script>
+
+    <script src="_static/js/shortcuts.js"></script>
+    <script src="_static/js/installtext.js"></script>
+    <script type="text/javascript">
+        setupShortcuts(maxLevel = 2);
+    </script>
+    <script type="text/javascript">
+        textRotate();
+    </script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.2';
-        DOCUMENTATION_OPTIONS.theme_switcher_json_url = '/_static/versions_switcher.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'latest';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
-        </script>
-    <link rel="icon" href="../../_static/logo.ico"/>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/> 
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../../blog/atom.xml"
-  title="Blog"
-/>
-  
-  </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
-
-  
-  
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="../../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search the docs ..."
-         aria-label="Search the docs ..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
-  
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
-<div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
-    <span class="fa-solid fa-bars"></span>
-  </label>
-  
-  
-  <div class="col-lg-3 navbar-header-items__start">
-    
-      <div class="navbar-item"><div id="navbar-start">
-    <a class="navbar-brand" href="../../index.html">
-        <img src="../../_static/images/logo.svg" class="logo" alt="logo" style="padding-right: 1rem;">
-        <!-- <img src="../../_static/images/text-logo.png" class="logo" alt="logo"> -->
-        <div id="navbar-logo-text">FURY</div>
-    </a>
-</div></div>
-    
-  </div>
-  
-  <div class="col-lg-9 navbar-header-items">
-    
-    <div class="me-auto navbar-header-items__center">
-      
-        <div class="navbar-item"><ul id="navbar-main-elements" class="navbar-nav">
-    <li class="nav-item">
-        <a class="nav-link" href="../../installation.html">Installation</a>
-    </li>
-    <li class="nav-item ">
-        <a class="nav-link" href="../../introduction.html">About</a>
-    </li>
-
-    <li class="nav-item ">
-        <a class="nav-link" href="../../reference/index.html">API reference</a>
-    </li>
-
-    <li class="nav-item ">
-        <a class="nav-link" href="../../blog.html">Blog</a>
-    </li>
-
-    <li class="nav-item ">
-        <a class="nav-link" href="../../community.html">Community</a>
-    </li>
-    
-</ul></div>
-      
-    </div>
-    
-    
-    <div class="navbar-header-items__end">
-      
-        <div class="navbar-item navbar-persistent--container">
-          
-
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
-        </div>
-      
-      
-        <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script></div>
-      
-    </div>
-    
-  </div>
-  
-  
-    <div class="navbar-persistent--mobile">
-
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
-    </div>
-  
-
-  
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
-      <span class="fa-solid fa-outdent"></span>
-    </label>
-  
-</div>
-
-    </header>
-  
-
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
-      
-      
-      
-        
-      
-      <div class="bd-sidebar-primary bd-sidebar">
-        
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-      <div class="sidebar-header-items__center">
-        
-          <div class="navbar-item"><ul id="navbar-main-elements" class="navbar-nav">
-    <li class="nav-item">
-        <a class="nav-link" href="../../installation.html">Installation</a>
-    </li>
-    <li class="nav-item ">
-        <a class="nav-link" href="../../introduction.html">About</a>
-    </li>
-
-    <li class="nav-item ">
-        <a class="nav-link" href="../../reference/index.html">API reference</a>
-    </li>
-
-    <li class="nav-item ">
-        <a class="nav-link" href="../../blog.html">Blog</a>
-    </li>
-
-    <li class="nav-item ">
-        <a class="nav-link" href="../../community.html">Community</a>
-    </li>
-    
-</ul></div>
-        
-      </div>
-    
-    
-    
-      <div class="sidebar-header-items__end">
-        
-          <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script></div>
-        
-      </div>
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-<h3><a href="../../index.html">Table of Contents</a></h3>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">About FURY</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../symlink/license.html">License</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../blog.html">Blog</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Programming with FURY</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../auto_examples/index.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../fury-pybullet.html">FURY - pyBullet Integration Guide</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Developers Guide</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">API Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../symlink/contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../release-history.html">Release History</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Join our community!</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../community.html">Contributors</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://discord.gg/6btFPPj">Discord Community</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://mail.python.org/mailman3/lists/fury.python.org">Mailing list</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/fury">Source Code</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/fury/issues/new/choose">File a bug</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/fury/issues/new/choose">Feature Request</a></li>
-</ul>
-</div>
-    </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
-
-
-      </div>
-      
-      <main id="main-content" class="bd-main">
-        
-        
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item">
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+          },
+          svg: {
+            fontCache: 'global'
+          }
+        };
+    </script>
 
 
 
-<nav aria-label="Breadcrumb">
-  <ul class="bd-breadcrumbs">
-    
-    <li class="breadcrumb-item breadcrumb-home">
-      <a href="../../index.html" class="nav-link" aria-label="Home">
-        <i class="fa-solid fa-home"></i>
-      </a>
-    </li>
-    <li class="breadcrumb-item active" aria-current="page">Google...</li>
-  </ul>
-</nav>
-</div>
-      
-    </div>
-  
-  
-</div>
-</div>
-              
-              
-              
-                
-<div id="searchbox"></div>
-                <article class="bd-article">
-                   <a class="reference external image-reference" href="https://summerofcode.withgoogle.com/programs/2023/projects/ED0203De"><img alt="https://developers.google.com/open-source/gsoc/resources/downloads/GSoC-logo-horizontal.svg" src="https://developers.google.com/open-source/gsoc/resources/downloads/GSoC-logo-horizontal.svg" style="height: 40px;" />
-</a>
-<a class="reference external image-reference" href="https://summerofcode.withgoogle.com/programs/2023/organizations/python-software-foundation"><img alt="https://www.python.org/static/img/python-logo&#64;2x.png" src="https://www.python.org/static/img/python-logo&#64;2x.png" style="height: 40px;" />
-</a>
-<a class="reference external image-reference" href="https://fury.gl/latest/index.html"><img alt="https://python-gsoc.org/logos/fury_logo.png" src="https://python-gsoc.org/logos/fury_logo.png" style="width: 40px;" />
-</a>
-<section id="google-summer-of-code-final-work-product">
-<h1>Google Summer of Code Final Work Product<a class="headerlink" href="#google-summer-of-code-final-work-product" title="Link to this heading">#</a></h1>
-<ul class="simple">
-<li><p><strong>Name:</strong> <a class="reference external" href="https://github.com/WassCodeur">Wachiou BOURAIMA</a></p></li>
-<li><p><strong>Organisation:</strong> <a class="reference external" href="https://www.python.org/psf-landing/">Python Software Foundation</a></p></li>
-<li><p><strong>Sub-Organisation:</strong> <a class="reference external" href="https://fury.gl/latest/index.html">FURY</a></p></li>
-<li><p><strong>Mentor:</strong> <a class="reference external" href="https://github.com/skoudoro">Serge Koudoro</a></p></li>
-<li><p><strong>Project:</strong> <a class="reference external" href="https://github.com/fury-gl/fury/wiki/Google-Summer-of-Code-2024-(GSOC2024)#project-1-modernize-fury-codebase">Modernization of Codebase FURY.</a></p></li>
-</ul>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>The Google Summer of Code (GSoC) 2024 was an enriching journey where I had the opportunity to work on modernizing the codebase of the <code class="docutils literal notranslate"><span class="pre">FURY</span></code> project, an open-source Python library for scientific visualization and 3D rendering. My project focused on optimizing the performance, improving documentation, and enhancing the overall user experience.</p>
-</section>
-<section id="abstract">
-<h2>Abstract<a class="headerlink" href="#abstract" title="Link to this heading">#</a></h2>
-<p>This project focused on modernizing the FURY codebase through the implementation of key features aimed at improving performance, maintainability, and usability. The initial phase involved the introduction of the <code class="docutils literal notranslate"><span class="pre">warn_on_args_to_kwargs</span></code> decorator, which enforces keyword-only arguments to ensure robust and future-proof API usage. Following this, the project moved to the implementation of lazy loading across various FURY modules, significantly optimizing the import process by deferring module loading until it is actually needed.
-Additionally, considerable effort was directed towards addressing and resolving Sphinx documentation warnings caused by inconsistencies in the docstrings. The solution involved aligning the documentation with the “numpydoc” standard, ensuring smooth compilation and enhancing the clarity and comprehensiveness of the project’s documentation. These enhancements culminated in a more efficient, well-organized FURY library, offering an improved developer experience and a solid foundation for future developments.</p>
-</section>
-<section id="proposed-objectives">
-<h2>Proposed Objectives<a class="headerlink" href="#proposed-objectives" title="Link to this heading">#</a></h2>
-<p>The primary objectives of my GSoC project were:</p>
-<ul class="simple">
-<li><p>Implement <code class="docutils literal notranslate"><span class="pre">Keyword-Only</span></code> Arguments Decorator: Ensure backward compatibility by warning users when positional arguments are passed instead of keyword arguments.</p></li>
-<li><p>Implement <code class="docutils literal notranslate"><span class="pre">Lazy</span> <span class="pre">Loading</span></code>: Introduce lazy loading to optimize module imports and reduce the memory footprint.</p></li>
-<li><p>Enhance Documentation: Address documentation warnings and improve the structure and clarity of the documentation.</p></li>
-<li><p>Modernize Codebase: Refactor existing code to ensure compatibility with the latest Python standards and improve maintainability.</p></li>
-</ul>
-</section>
-<section id="objectives-completed">
-<h2>Objectives Completed<a class="headerlink" href="#objectives-completed" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Implement <code class="docutils literal notranslate"><span class="pre">warn_on_args_to_kwargs</span></code> Decorator in FURY:</p></li>
-</ol>
-<p>The first phase of this project was to develop the <code class="docutils literal notranslate"><span class="pre">warn_on_args_to_kwargs</span></code> decorator. This decorator is designed to check that all arguments after the first are passed as named arguments, and to ensure that users respect this convention.
-The decorator works by inspecting the signature of the decorated function using the inspect module’s signature function. It identifies function arguments that must be passed as named arguments (<cite>KEYWORD_ONLY_ARGS</cite>) and positional arguments (<cite>POSITIONAL_ARGS</cite>).
-When a decorated function is called, the decorator compares the arguments supplied with those expected by the signature. If mandatory named arguments are missing, or if positional arguments are used where named arguments are expected, the decorator attempts to correct these errors by transforming the remaining positional arguments into named arguments.
-In addition, the decorator issues a warning (<cite>UserWarning</cite>) if the current version of FURY is within a certain range (<cite>from_version</cite> to <cite>until_version</cite>). This warning informs the user that the current function call method will no longer be supported in future versions of FURY. If the FURY version exceeds until_version, an error is raised to indicate that the calling method is obsolete.</p>
-<p>This decorator was applied to several key FURY modules, including <code class="docutils literal notranslate"><span class="pre">actors</span></code>, <code class="docutils literal notranslate"><span class="pre">ui</span></code>, <code class="docutils literal notranslate"><span class="pre">animation</span></code>, <code class="docutils literal notranslate"><span class="pre">shares</span></code>, <code class="docutils literal notranslate"><span class="pre">data</span></code>, and <code class="docutils literal notranslate"><span class="pre">stream</span></code>. This enhanced the robustness and maintainability of the code, minimizing potential errors due to incorrect use of arguments.</p>
-<p>code source: <a class="github reference external" href="https://github.com/fury-gl/fury/blob/master/fury/decorators.py">fury-gl/fury</a></p>
-<p><em>Pull Requests</em>:</p>
-<ul class="simple">
-<li><p>Applied the <code class="docutils literal notranslate"><span class="pre">warn_on_args_to_kwargs</span></code> decorator to multiple modules:</p>
-<ul>
-<li><p>actors: <a class="github reference external" href="https://github.com/fury-gl/fury/pull/898">fury-gl/fury#898</a> (merged)</p></li>
-<li><p>animation: <a class="github reference external" href="https://github.com/fury-gl/fury/pull/899">fury-gl/fury#899</a> (merged)</p></li>
-<li><p>data: <a class="github reference external" href="https://github.com/fury-gl/fury/pull/900">fury-gl/fury#900</a> (merged)</p></li>
-<li><p>shares: <a class="github reference external" href="https://github.com/fury-gl/fury/pull/901">fury-gl/fury#901</a> (merged)</p></li>
-<li><p>ui: <a class="github reference external" href="https://github.com/fury-gl/fury/pull/902">fury-gl/fury#902</a> (merged)</p></li>
-<li><p>stream: <a class="github reference external" href="https://github.com/fury-gl/fury/pull/909">fury-gl/fury#909</a> (merged)</p></li>
-</ul>
-</li>
-<li><p>Initial implementation of the decorator: <a class="github reference external" href="https://github.com/fury-gl/fury/pull/888">fury-gl/fury#888</a> (merged)</p></li>
-</ul>
-<ol class="arabic simple" start="2">
-<li><p><strong>Implement Lazy loading in FURY</strong></p></li>
-</ol>
-<p>Overview:
-The implementation of lazy loading in FURY was a key enhancement aimed at optimizing performance by delaying the loading of modules until they are actually needed. This approach reduces startup time and memory usage by only loading modules when they are accessed.</p>
-<ul class="simple">
-<li><p>Implementation of lazy loading: Lazy loading was applied to various FURY modules using the lazy_loader module. This technique ensures that modules are only loaded into memory when their functionalities are first accessed, rather than during the initial import of the package.</p></li>
-<li><p>Reading <a class="reference external" href="https://scientific-python.org/specs/spec-0001/">SPEC1</a>: To ensure best practices, I reviewed the <a class="reference external" href="https://scientific-python.org/specs/spec-0001/">SPEC1</a> document from Scientific Python. This document offered valuable insights and guidelines on implementing lazy loading effectively.</p></li>
-<li><p>Update <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> Files: The <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> files were modified to support lazy loading. By leveraging <code class="docutils literal notranslate"><span class="pre">lazy_loader</span></code>, these files were configured to load modules only when accessed. This change helps in managing dependencies efficiently and improves the overall performance of the package.</p></li>
-</ul>
-<p><em>Examples Implementation</em>:</p>
-<div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">fury/__init__.py</span><a class="headerlink" href="#id1" title="Link to this code">#</a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lazy_loader</span> <span class="k">as</span> <span class="nn">lazy</span>
-<span class="kn">from</span> <span class="nn">fury.pkg_info</span> <span class="kn">import</span> <span class="n">__version__</span><span class="p">,</span> <span class="n">pkg_commit_hash</span>
-
-<span class="c1"># Configure lazy loading</span>
-<span class="fm">__getattr__</span><span class="p">,</span> <span class="fm">__dir__</span><span class="p">,</span> <span class="n">__all__</span> <span class="o">=</span> <span class="n">lazy</span><span class="o">.</span><span class="n">attach_stub</span><span class="p">(</span><span class="vm">__name__</span><span class="p">,</span> <span class="vm">__file__</span><span class="p">)</span>
-
-<span class="c1"># Append additional attributes</span>
-<span class="n">__all__</span> <span class="o">+=</span> <span class="p">[</span>
-   <span class="s2">&quot;__version__&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;disable_warnings&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;enable_warnings&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;get_info&quot;</span><span class="p">,</span>
-<span class="p">]</span>
-
-<span class="c1"># other functions and classes</span>
-</pre></div>
-</div>
-</div>
-<div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">fury/__init__.pyi</span><a class="headerlink" href="#id2" title="Link to this code">#</a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Type stub file for the fury package to support type-checking tools</span>
-
-<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
-   <span class="s2">&quot;actor&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;actors&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;animation&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;colormap&quot;</span><span class="p">,</span>
-   <span class="c1"># ... (other modules)</span>
-   <span class="p">]</span>
-
-<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="p">(</span>
-   <span class="n">actor</span><span class="p">,</span>
-   <span class="n">actors</span><span class="p">,</span>
-   <span class="n">animation</span><span class="p">,</span>
-   <span class="n">colormap</span><span class="p">,</span>
-   <span class="c1"># ... (other modules)</span>
-   <span class="p">)</span>
-
-<span class="c1"># ... code block</span>
-</pre></div>
-</div>
-</div>
-<ul class="simple">
-<li><p>Added Type Stubs (<code class="docutils literal notranslate"><span class="pre">__init__.pyi</span></code>):</p></li>
-</ul>
-<p>Type stubs (<code class="docutils literal notranslate"><span class="pre">__init__.pyi</span></code> files) were added to provide type <cite>hints</cite> for the lazy loaded modules. This helps with type checking tools like <cite>mypy</cite> and enhances the development experience by offering better autocompletion and documentation in code editors.</p>
-<ul class="simple">
-<li><p>Improved Module Organization:</p></li>
-</ul>
-<dl class="simple">
-<dt>The organization of the <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> and <code class="docutils literal notranslate"><span class="pre">__init__.pyi</span></code> files was refined to better support lazy loading. This included restructuring imports and ensuring that module dependencies were managed efficiently.</dt><dd><ul class="simple">
-<li><p>Import Simplification: One significant change was simplifying how FURY is imported in example modules. Previously, the import statements were more complex, like from fury <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">....</span></code> To align with the lazy loading principles and reduce unnecessary overhead, I updated these statements to a more straightforward import fury This change ensures that only the necessary components are loaded when they are actually needed, improving performance.</p></li>
-</ul>
-</dd>
-</dl>
-<p><em>Pull Requests</em>:</p>
-<ul class="simple">
-<li><p><a class="github reference external" href="https://github.com/fury-gl/fury/pull/907">fury-gl/fury#907</a> (merged)</p></li>
-<li><p><a class="github reference external" href="https://github.com/fury-gl/fury/pull/919">fury-gl/fury#919</a> (merged)</p></li>
-<li><p>Simpply imports in FURY’s examples: <a class="github reference external" href="https://github.com/fury-gl/fury/pull/918">fury-gl/fury#918</a> (merged)</p></li>
-</ul>
-<ol class="arabic" start="3">
-<li><p><strong>Handling Sphinx Warnings and Footer Deformation Issues</strong></p>
-<ol class="arabic simple">
-<li><p>Addressing Sphinx Warnings:
-During the third phase, significant focus was placed on resolving Sphinx warnings related to documentation inconsistencies. The core issue stemmed from a mismatch between the documentation conventions used in the docstrings and the configuration settings in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
-<ul class="simple">
-<li><p>Problem Identification:</p></li>
-<li><p>Mismatch between <code class="docutils literal notranslate"><span class="pre">numpydoc</span></code> and <code class="docutils literal notranslate"><span class="pre">napoleon</span></code>: The docstrings in the modules followed the numpydoc convention, while the conf.py file was configured to use sphinx.ext.napoleon. This discrepancy caused Sphinx to struggle with parsing and generating documentation correctly.</p></li>
-<li><p>Solutions Explored:</p>
-<ul>
-<li><p>Documentation Style Review: Examined the differences between <code class="docutils literal notranslate"><span class="pre">numpydoc</span></code> and <code class="docutils literal notranslate"><span class="pre">napoleon</span></code> documentation styles to understand the root of the issues.</p></li>
-<li><p>Configuration Update vs. Docstring Conversion: Evaluated whether to update docstrings to match napoleon style or configure Sphinx to support numpydoc.</p></li>
-</ul>
-</li>
-<li><p>Decision and Implementation:</p></li>
-<li><p>Configuration Update: Chose to update the Sphinx configuration to support the <code class="docutils literal notranslate"><span class="pre">numpydoc</span></code> style, aligning it with the existing docstrings. This adjustment resolved the conflicts and allowed Sphinx to compile the documentation without warnings.</p></li>
-</ul>
-</li>
-</ol>
-<p>Updated Configuration in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
-<div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">conf.py</span><a class="headerlink" href="#id3" title="Link to this code">#</a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
-   <span class="o">...</span>
-   <span class="s2">&quot;sphinx.ext.autodoc&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;numpydoc&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;sphinx.ext.autosummary&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;sphinx.ext.githubpages&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;sphinx.ext.intersphinx&quot;</span><span class="p">,</span>
-   <span class="o">...</span><span class="p">,</span>
-   <span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<ol class="arabic" start="2">
-<li><p>Investigating and Fixing the Footer Deformation Issue (<a class="github reference external" href="https://github.com/fury-gl/fury/issues/874">fury-gl/fury#874</a> (closed)):</p>
-<ul class="simple">
-<li><p>Issue Identification: The footer on the FURY website deformed when hovering over elements due to size increases, which affected the padding of its container and the layout of subsequent elements.</p></li>
-<li><p>Initial Approach: Bold Styling: Attempted to resolve the issue by making the elements bold on hover instead of changing font size. While this approach fixed the deformation, it did not meet the design requirements for the homepage footer.</p></li>
-<li><p>Final Fix: CSS Adjustments: Added properties to the <code class="docutils literal notranslate"><span class="pre">.class-columns</span></code> in <code class="docutils literal notranslate"><span class="pre">styles.css</span></code> to better manage the footer style and prevent layout issues, ensuring that the design integrity was maintained.</p></li>
-</ul>
-<p>Video Demonstrations:
-Before Fixing the Footer Issue:</p>
-<p>Video demonstrating the footer deformation before the fix.</p>
-<iframe src="https://github.com/user-attachments/assets/2f5d4021-b661-4be9-944f-7a2638376f2c" width="640" height="390" frameborder="0" allowfullscreen></iframe><p>After Fixing the Footer Issue:</p>
-<p>Video showing the footer after applying the fix.</p>
-<iframe src="https://github.com/user-attachments/assets/b0ec74df-827b-4280-b3e4-bf968b97a654" width="640" height="390" frameborder="0" allowfullscreen></iframe></li>
-</ol>
-</li>
-</ol>
-<p><em>Pull Requests</em>:</p>
-<ul class="simple">
-<li><p>Addressed Sphinx warnings and updated configuration: <a class="github reference external" href="https://github.com/fury-gl/fury/pull/922">fury-gl/fury#922</a> (merged)</p></li>
-<li><p><a class="github reference external" href="https://github.com/fury-gl/fury/pull/915">fury-gl/fury#915</a> (merged)</p></li>
-<li><p>fix typos in blog posts: <a class="github reference external" href="https://github.com/fury-gl/fury/pull/911">fury-gl/fury#911</a> (merged)</p></li>
-<li><p>Fix footer deformation issue: <a class="github reference external" href="https://github.com/fury-gl/fury/pull/925">fury-gl/fury#925</a> (merged)</p></li>
-</ul>
-</section>
-<section id="other-objectives">
-<h2>Other Objectives<a class="headerlink" href="#other-objectives" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Peer Review Contributions:</p>
-<ul class="simple">
-<li><p>Reviewed and provided feedback on PRs from other contributors to the FURY and DIPY projects.</p></li>
-<li><p>Assisted in resolving issues and improving code quality in the PRs.</p></li>
-</ul>
-</li>
-</ol>
-<p><em>Pull Requests</em>:</p>
-<ul class="simple">
-<li><p><a class="github reference external" href="https://github.com/fury-gl/fury/pull/913">fury-gl/fury#913</a> (merged)</p></li>
-</ul>
-</section>
-<section id="objectives-in-progress">
-<h2>Objectives in Progress<a class="headerlink" href="#objectives-in-progress" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Enhancing Documentation:</p>
-<ul class="simple">
-<li><p>Ongoing work to improve the documentation structure and content.</p></li>
-<li><p>Addressing additional Sphinx warnings.</p></li>
-</ul>
-</li>
-<li><p>Modernizing Codebase:</p>
-<ul class="simple">
-<li><p>Refactoring existing code to align with the latest Python standards.</p></li>
-<li><p>Implementing best practices for code maintainability and readability.</p></li>
-<li><p>Separating FURY’s codebase and website.</p></li>
-</ul>
-</li>
-<li><p>Community Engagement:</p>
-<ul class="simple">
-<li><p>Engaging with the FURY community through discussions, feedback, and contributions.</p></li>
-<li><p>Participating in community events and meetings to share progress and gather insights.</p></li>
-</ul>
-</li>
-</ol>
-</section>
-<section id="gsoc-weekly-blogs">
-<h2>GSoC Weekly Blogs<a class="headerlink" href="#gsoc-weekly-blogs" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>My blog posts can be found at <a class="reference external" href="https://fury.gl/latest/blog/author/wachiou-bouraima.html">FURY website</a> and <a class="reference external" href="https://social.python-gsoc.org/&#64;wasscodeur">Python GSoC Mastodon server</a>.</p></li>
-</ul>
-</section>
-<section id="timeline">
-<h2>Timeline<a class="headerlink" href="#timeline" title="Link to this heading">#</a></h2>
-<table class="table">
-<colgroup>
-<col style="width: 20.0%" />
-<col style="width: 60.0%" />
-<col style="width: 20.0%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Date</p></th>
-<th class="head"><p>Description</p></th>
-<th class="head"><p>Blog Post Link</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Week 0 (28-05-2024)</p></td>
-<td><p>The beginning of my journey in Google Summer of Code</p></td>
-<td><p><a class="reference external" href="https://fury.gl/latest/posts/2024/2024-05-28-week0-wachiou-bouraima.html">Blog post</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>Week 1 (06-06-2024)</p></td>
-<td><p>Progress and challenges at Google Summer of Code</p></td>
-<td><p><a class="reference external" href="https://fury.gl/latest/posts/2024/2024-06-06-week1-wachiou-bouraima.html">Blog Post</a></p></td>
-</tr>
-<tr class="row-even"><td><p>Week 2 (15-06-2024)</p></td>
-<td><p>Refinements and Further Enhancements</p></td>
-<td><p><a class="reference external" href="https://fury.gl/latest/posts/2024/2024-06-15-week2-wachiou-bouraima.html">Blog post</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>Week 3 (19-06-2024)</p></td>
-<td><p>Refinements and Further Enhancements</p></td>
-<td><p><a class="reference external" href="https://fury.gl/latest/posts/2024/2024-06-26-week3-wachiou-bouraima.html">Blog post</a></p></td>
-</tr>
-<tr class="row-even"><td><p>Week 4 (26-06-2024)</p></td>
-<td><p>Updating Decorator, Exploring Lazy Loading, and Code Reviews</p></td>
-<td><p><a class="reference external" href="https://fury.gl/latest/posts/2024/2024-06-26-week4-wachiou-bouraima.html">Blog post</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>Week 5 (06-07-2024)</p></td>
-<td><p>Implementing Lazy Loading in FURY with lazy_loader</p></td>
-<td><p><a class="reference external" href="https://fury.gl/latest/posts/2024/2024-07-06-week5-wachiou-bouraima.html">Blog post</a></p></td>
-</tr>
-<tr class="row-even"><td><p>Week 6 (06-08-2024)</p></td>
-<td><p>Code reviews, relining and crush challenges</p></td>
-<td><p><a class="reference external" href="https://fury.gl/latest/posts/2024/2024-08-06-week6-wachiou-bouraima.html">Blog post</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>Week 7 (06-08-2024)</p></td>
-<td><p>Fixing Sphinx Warnings in Blog Posts</p></td>
-<td><p><a class="reference external" href="https://fury.gl/latest/posts/2024/2024-08-06-week7-wachiou-bouraima.html">Blog post</a></p></td>
-</tr>
-<tr class="row-even"><td><p>Week 8 (12-08-2024)</p></td>
-<td><p>Refining Lazy Loading Implementation and Simplifying Imports in FURY</p></td>
-<td><p><a class="reference external" href="https://fury.gl/latest/posts/2024/2024-08-12-week8-wachiou-bouraima.html">Blog post</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>Week 9 (13-08-2024)</p></td>
-<td><p>Fixing Sphinx Warnings and Investigating Web Footer Issues</p></td>
-<td><p><a class="reference external" href="https://fury.gl/latest/posts/2024/2024-08-13-week9-wachiou-bouraima.html">Blog post</a></p></td>
-</tr>
-<tr class="row-even"><td><p>Week 10 (15-08-2024)</p></td>
-<td><p>Investigating Footer Deformation and Limited Progress on Warnings</p></td>
-<td><p><a class="reference external" href="https://fury.gl/latest/posts/2024/2024-08-15-week10-wachiou-bouraima.html">Blog post</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>Week 11 (14-08-2024)</p></td>
-<td><p>Resolving the Footer Issue and Addressing Sphinx Warnings</p></td>
-<td><p><a class="reference external" href="https://fury.gl/latest/posts/2024/2024-08-15-week11-wachiou-bouraima.html">Blog post</a></p></td>
-</tr>
-<tr class="row-even"><td><p>Week 12 (17-08-2024)</p></td>
-<td><p>The final straight</p></td>
-<td><p><a class="reference external" href="https://fury.gl/latest/posts/2024/2024-08-17-week12-wachiou-bouraima.html">Blog post</a></p></td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-
-<div class="section ablog__blog_comments">
-     
-<div class="section ablog__prev-next">
-  <span class="ablog__prev">
-     
-    <a href="2024-08-17-week12-wachiou.html">
-      
-      <i class="fa fa-arrow-circle-left"></i>
-      
-      <span>WEEK 12: The final straight</span>
-    </a>
-    
-  </span>
-  <span class="ablog__spacer">&nbsp;</span>
-  <span class="ablog__next">
-    
-  </span>
-</div>
-  
-</div>
-
-                </article>
-              
-              
-              
-              
-              
-                <footer class="prev-next-footer">
-                  
-<div class="prev-next-area">
-</div>
-                </footer>
-              
-            </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proposed-objectives">Proposed Objectives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives-completed">Objectives Completed</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-objectives">Other Objectives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives-in-progress">Objectives in Progress</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gsoc-weekly-blogs">GSoC Weekly Blogs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timeline">Timeline</a></li>
-</ul>
-  </nav></div>
-
-  <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../../_sources/posts/2024/2024-08-21-wachiou-final-report.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
-
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            
-          </footer>
-        
-      </main>
-    </div>
-  </div>
-  
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
- 
-  <footer class="bd-footer">
-<div class="bd-footer__inner bd-page-width">
-  
-    <div class="footer-items__start">
-      
-        <div class="footer-item"><div id="footer-columns" class="footer-columns">
-    <div class="footer-logo-column">
-        <img id="footer-logo" src="../../_static/images/logo.svg" alt=" logo. ">
-    </div>
-    <div class="link-column">
-        <div class="footer-column">
-            <div class="footer-header">
-                <h5 class="footer-h5">About</h5>
-            </div>
-            <ul class="link-list" style="padding-left: 0px;">
-                <li class="link-list"><a class="footer-link" href="../../community.html"><i
-                            class="fa fa-angle-double-right"></i> Developers</a></li>
-                <li class="link-list"><a class="footer-link" href="https://discord.gg/6btFPPj"><i
-                            class="fa fa-angle-double-right"></i> Support</a></li>
-                <li class="link-list"><a class="footer-link" href="../../installation.html"><i
-                            class="fa fa-angle-double-right"></i> Download</a></li>
-                <li class="link-list"><a class="footer-link" href="../../auto_tutorials/index.html"><i
-                            class="fa fa-angle-double-right"></i> Tutorials</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="link-column">
-        <div class="footer-column">
-            <div class="footer-header">
-                <h5 class="footer-h5">Friends</h5>
-            </div>
-            <ul class="" style="padding-left: 0px;">
-                <li class="link-list"><a class="footer-link" target="_blank" href="https://dipy.org/"><i
-                            class="fa fa-angle-double-right"></i> DIPY</a></li>
-                <li class="link-list"><a class="footer-link" target="_blank" href="https://heliosnetwork.io/"><i
-                            class="fa fa-angle-double-right"></i> Helios</a></li>
-                <li class="link-list"><a class="footer-link" target="_blank" href="https://furiousatoms.com/"><i
-                            class="fa fa-angle-double-right"></i> Furious Atoms</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="link-column">
-        <div class="footer-column">
-            <div class="footer-header">
-                <h5 class="footer-h5">Support</h5>
-            </div>
-            <ul class="" style="padding-left: 0px;">
-                <li class="link-list"><a class="footer-link" target="_blank" href="https://engineering.indiana.edu/"><i
-                            class="fa fa-angle-double-right"></i>
-                        The department of Intelligent Systems Engineering of Indiana University
-                    </a></li>
-                <li class="link-list"><a class="footer-link" target="_blank"
-                        href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1720625"><i
-                            class="fa fa-angle-double-right"></i>
-                        NSF NCN - Engineered NanoBIO - NSF award #1720625
-                    </a></li>
-                <li class="link-list"><a class="footer-link" target="_blank"
-                        href="https://summerofcode.withgoogle.com/"><i class="fa fa-angle-double-right"></i>
-                        Google Summer of Code Program
-                    </a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-actions">
 
 
-        <nav class="level is-mobile">
-            <div class="social-media-icons">
-                <a class="level-item" href="https://github.com/fury-gl/fury"
-                    aria-label="https://github.com/fury-gl/fury">
-                    <span class="icon"><i class="fab fa-github-alt"
-                            style="color: white; margin-right: 0.75rem;"></i></span>
-                </a>
-                <a class="level-item" href="https://twitter.com/fury_engine"
-                    aria-label="https://twitter.com/fury_engine">
-                    <span class="icon"><i class="fab fa-twitter"
-                            style="color: white; margin-right: 0.75rem;"></i></span>
-                </a>
-            </div>
-        </nav>
-        <div class="copyright">&copy; 2018-2024, FURY. All rights reserved.</div>
-    </div>
-</div></div>
-      
-    </div>
-  
-  
-  
-</div>
 
-  </footer>
-<link rel="stylesheet" href="../../_static/css/blog.css" type="text/css">
-<link rel="stylesheet" href="../../_static/vendor/vars.css" />
-<link rel="stylesheet" href="../../_static/vendor/styles.css" />
-<link rel="stylesheet" href="../../_static/vendor/sphinx-footer.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-  crossorigin="anonymous" />
-<style>
-  /* Sidebar header (and topbar for mobile) */
-  .wy-side-nav-search,
-  .wy-nav-top {
-    background: #990000;
-  }
 
-  /* Sidebar */
-  .wy-nav-side {
-    background: #4A3C31;
-  }
-</style>
-<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
-  new Crate({
-    server: '695048505902891009',
-    channel: '695305679682011217',
-    shard: 'https://e.widgetbot.io',
-    // glyph: ['https://i0.wp.com/www.puclpodcast.com/wp-content/uploads/2014/03/discord-chat-link-button.jpg?w=681&ssl=1', '100%'],
-  })
-</script>
 
-  </body>
+
+
+
+
+</body>
+
 </html>
